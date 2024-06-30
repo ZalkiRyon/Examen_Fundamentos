@@ -75,15 +75,15 @@ def main():
                 clasificacion = clasificar_sueldos(sueldos)
                 for rango, lista in clasificacion.items():
                     print(f"{rango}: {len(lista)} trabajadores")
-                    if lista:  # Check if the list is not empty
-                        print("Nombre empleado Sueldo")
+                    if lista:
+                        print("Nombre empleado\t Sueldo")
                     for sueldo in lista:
                         empleado_index = sueldos.index(sueldo)
                         empleado = trabajadores[empleado_index]
                         print(f"{empleado}: {sueldo}")
                     print(f"Sumatoria de sueldos en {rango}: ${sum(lista)}\n")
                 acumulado = sum(sueldos)
-                print(f"Sumatoria total de sueldos: ${acumulado}")
+                print(f"Sumatoria total de sueldos: ${acumulado}")                                    
                 
         elif opcion == "3":
             if not sueldos:

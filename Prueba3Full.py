@@ -86,8 +86,8 @@ def main():
 
         elif opcion == '4':
             print("Finalizando programa...")
-            print("Desarrollado por Carlos Vergara")
-            print("RUT 12.345.678-9")
+            print("Desarrollado por Sebastian Valdivia")
+            print("RUT 17.753.940-6")
             break
 
         else:
