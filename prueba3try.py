@@ -7,7 +7,7 @@ trabajadores = ["Juan Pérez","María García","Carlos López","Ana Martínez","
 def generar_sueldos():
     sueldos = [random.randint(300000, 2500000) for _ in range(len(trabajadores))]
     return sueldos
-#ambos hacen lo mismo, uno es más comprensible que el otro
+
 
 
 def clasificar_sueldos(sueldos):
@@ -72,11 +72,19 @@ def main():
             if not sueldos:
                 print("Debe asignar sueldos primero")
             else:
-                clasificacion = clasificar_sueldos(sueldos)                
+                clasificacion = clasificar_sueldos(sueldos)
                 for rango, lista in clasificacion.items():
                     print(f"{rango}: {len(lista)} trabajadores")
-                    print(f"Sumatoria de sueldos en {rango}: ${sum(lista)}")
-
+                    if lista:  # Check if the list is not empty
+                        print("Nombre empleado Sueldo")
+                    for sueldo in lista:
+                        empleado_index = sueldos.index(sueldo)
+                        empleado = trabajadores[empleado_index]
+                        print(f"{empleado}: {sueldo}")
+                    print(f"Sumatoria de sueldos en {rango}: ${sum(lista)}\n")
+                acumulado = sum(sueldos)
+                print(f"Sumatoria total de sueldos: ${acumulado}")
+                
         elif opcion == "3":
             if not sueldos:
                 print("Debe asignar sueldos primero")
