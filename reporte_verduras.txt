@@ -1,1 +1,7 @@
 Las verduras registradas son: 
+
+                    Nombre: Pera
+                    Origen: Peru
+                    Valor por kg: 50
+                    Stock: 100 
+------------------------------
