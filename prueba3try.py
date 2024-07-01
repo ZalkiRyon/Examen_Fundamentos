@@ -76,7 +76,7 @@ def main():
                 for rango, lista in clasificacion.items():
                     print(f"{rango}: {len(lista)} trabajadores")
                     if lista:
-                        print("Nombre empleado\t Sueldo")
+                        print("Nombre empleado\t: Sueldo")
                     for sueldo in lista:
                         empleado_index = sueldos.index(sueldo)
                         empleado = trabajadores[empleado_index]
